@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.3.5</version>
+		<relativePath />
+		<!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>demo</name>
+	<description>HiringAndGO applictaion with spring boot</description>
+
+	<licenses>
+		<license>
+			<name>Apache License 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
+			<distribution>repo</distribution>
+		</license>
+
+		<license>
+			<name>MIT License</name>
+			<url>https://opensource.org/licenses/MIT</url>
+			<distribution>repo</distribution>
+		</license>
+
+		<license>
+			<name>Eclipse Public License 2.0</name>
+			<url>https://www.eclipse.org/legal/epl-2.0/</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>Anna8230094</id>
+			<name>Άννα Μαρία Μεγάλου</name>
+			<email>t8230094@aueb.gr</email>
+			<url>https://github.com/Anna8230094</url>
+			<roles>
+				<role>Project Manager</role>
+				<role>Back-End Developer</role>
+			</roles>
+		</developer>
+
+		<developer>
+			<id>aggmegalou</id>
+			<name>Αγγελική Δέσποινα Μεγάλου</name>
+			<email>t8230093@aueb.gr</email>
+			<url>https://github.com/aggmegalou</url>
+			<roles>
+				<role>Back-End Deverloper</role>
+				<role>Presentation Designer</role>
+			</roles>
+		</developer>
+
+		<developer>
+			<id>t8230144</id>
+			<name>Κωνσταντία Νικολέτα Στεργίου</name>
+			<email>t8230144@aueb.gr</email>
+			<url>https://github.com/t8230144</url>
+			<roles>
+				<role>Database Developer</role>
+				<role>Back-End Developer</role>
+			</roles>
+		</developer>
+
+		<developer>
+			<id>Valeria8230135</id>
+			<name>Βαλέρια Σουμελίδη</name>
+			<email>t8230135@aueb.gr</email>
+			<url>https://github.com/valeria8230135</url>
+			<roles>
+				<role>Front-End Developer</role>
+			</roles>
+		</developer>
+
+		<developer>
+			<id>t8230136</id>
+			<name>Μαρία Σπάχου</name>
+			<email>t8230136@aueb.gr</email>
+			<url>https://github.com/t8230136</url>
+			<roles>
+				<role>Back-End Developer</role>
+			</roles>
+		</developer>
+
+		<developer>
+			<id>Nellyandr</id>
+			<name>Νεκταρία Ευαγγελία Ανδρουλάκη</name>
+			<email>t8230007@aueb.gr</email>
+			<url>https://github.com/Nellyandr6</url>
+			<roles>
+				<role>Front-End Developer</role>
+			</roles>
+		</developer>
+
+		<developer>
+			<id>ellisavetpothitou</id>
+			<name>Ελλισάβετ Αλεξία Ποθητού</name>
+			<email>t8230227@aueb.gr</email>
+			<url>https://github.com/ellisavetpothitou</url>
+			<roles>
+				<role>Presentation Designer</role>
+				<role>Front-End Developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:https://github.com/Anna8230094/TechLeads.git</connection>
+		<developerConnection>scm:git:git@github.com:Anna8230094/TechLeads.git</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/Anna8230094/TechLeads</url>
+	</scm>
+	<properties>
+		<java.version>21</java.version>
+	</properties>
+
+	<dependencies>
+
+
+
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>inline</artifactId>
+			<version>2.20.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.optionfactory.spring</groupId>
+			<artifactId>thymeleaf</artifactId>
+			<version>19.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>2.0.2-beta</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>spring-context-support</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20240303</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testifyproject.junit5</groupId>
+			<artifactId>junit5</artifactId>
+			<version>1.0.6</version>
+			<type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>mockito-junit-jupiter</artifactId>
+					<groupId>org.mockito</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>mockito-core</artifactId>
+					<groupId>org.mockito</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.12</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+
+
+</project>

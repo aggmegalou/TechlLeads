@@ -1,0 +1,111 @@
+/*Author: Evangelia-Nektaria Androulaki AM:8230007 */
+
+
+/* CSS for the body of the registration form*/
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color:#ffffff;
+    color: #000000;
+    font-family: Roboto;
+    font-size: 20px;
+}
+
+
+/*CSS for the h1 Heading*/
+h1{
+    margin: 0;
+    color: #172d5c;
+    margin-left: 20px;
+}
+ 
+/*CSS for the paragraphs*/
+p {
+    margin: 1em auto;
+    text-align: center;
+    font-weight: bolder;
+    color: #172d5c;
+    font-size: 28px;
+  }
+
+
+/*CSS for the Form*/  
+form {
+    width: 60%;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+ 
+/*CSS for the fieldsets*/
+fieldset {
+    border: none;
+    padding: 2rem 0;
+}
+ 
+/*CSS for the last (3rd) fieldset*/
+fieldset:last-of-type {
+    border-bottom: none;
+}
+ 
+/*CSS for the labels*/
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+
+/*CSS for the imput and the textarea*/
+input, textarea {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+    background-color: #ffffff;
+    border: 1px solid #5366b6;
+    border-width: 2px;
+    border-radius: 12px;
+    color: #000000;
+}
+ 
+/*CSS for the input that it's type is submit*/
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #5366b6;
+    border-color: #5366b6;
+    min-width: 300px;
+    color: white;
+}
+
+
+/*CSS for the input that it's type is file*/
+input[type="file"] {
+    padding: 10px;                    
+    background-color: #ffffff;        
+    border: 2px solid #5366b6;        
+    border-radius: 12px;              
+    color: #000000;                  
+    font-size: 16px;                  
+    width: 100%;                      
+    display: flex;                  
+}
+
+
+/* CSS for the file-upload-button */
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #5366b6;        
+    border: none;                    
+    color: white;                    
+    padding: 5px 10px;              
+    font-size: 12px;                        
+    cursor: pointer;  
+    border-radius: 8px;              
+}
+                   
+
+

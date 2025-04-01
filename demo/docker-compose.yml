@@ -1,0 +1,33 @@
+version: "3.1"
+
+services:
+  db-postgress:
+    image: "postgres:latest"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - techleads-network
+  back-end:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: techleads/app
+    depends_on:
+      - db-postgress
+    environment:
+      DB_HOST: db-postgress
+      DB_DATABASE: postgres
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      OPENAI_API_KEY: 
+    ports:
+      - "8080:8080"
+    networks:
+      - techleads-network
+
+networks:
+  techleads-network:

@@ -1,0 +1,89 @@
+<!-- Author: Evangelia-Nektaria Androulaki AM:8230007 -->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hire&Go Registration Form</title>
+  <link rel="stylesheet" href="/css/registration.css" />
+</head>
+
+
+<body>
+  <h1>Hire&Go</h1>
+
+  <form action="#" th:action="@{/registrationform}" method="post" th:object="${user}" enctype="multipart/form-data">
+
+  <!-- Registration Form -->
+  <form action="#" th:action="@{/registrationform}" method="post" th:object="${user}" enctype="multipart/form-data">
+
+
+    <!-- Fieldset No1 -->
+    <fieldset>
+      <p>Company's Information</p>
+      <label th:field="*{name}" for="name">Company's Name<input id="name" name="name" type="text"  required /></label>
+      <label th:field="*{field}"for="field">Job Position<input id="field" name="field" type="text"  required /></label>
+      <label th:field="*{email}" for="email">User's Email<input id="email" name="email" type="email" required /></label>
+    </fieldset>
+
+
+    <!-- Fieldset No2 -->
+    <fieldset>
+      <p>Job Position's Requirements</p>
+      <label th:field="*{hardSkills}" for="hardSkills">Hard Skills</label>
+      <textarea id="hardSkills" name="hardSkills" rows="4" cols="50" required></textarea>
+
+      <label th:field="*{softSkills}" for="softSkills">Soft Skills</label>
+      <textarea id="softSkills" name="softSkills" rows="4" cols="50"  required></textarea>
+
+      <label th:field="*{otherTraits}" for="otherTraits">Other Traits</label>
+      <textarea id="otherTraits" name="otherTraits" rows="4" cols="50"></textarea>
+    </fieldset>
+
+
+    <!-- Fieldset No3 -->
+    <fieldset>
+      <p>Upload all CVs here!</p>
+      <label for="file">Upload CVs:</label>
+      <input id="file" name="file" type="file" multiple required />
+      <ul id="file-list"></ul>
+    </fieldset>
+
+
+    <script>
+      const fileInput = document.getElementById('file');
+      const fileList = document.getElementById('file-list');
+      let filesArray = [];
+      // Here, the files are getting sellected
+
+
+      fileInput.addEventListener('change', (event) => {
+        // We add the new files to the list
+        Array.from(event.target.files).forEach((file) => {
+          if (!filesArray.some(existingFile => existingFile.name === file.name && existingFile.size === file.size)) {
+            filesArray.push(file);
+            const listItem = document.createElement('li');
+            listItem.textContent = file.name;
+            fileList.appendChild(listItem);
+          } else {
+            console.log("not the same file");
+          }
+
+
+        });
+        fileInput = '';
+      });
+
+
+    </script>
+   
+    <input type="submit" value="Submit" />
+  
+  </form>
+</body>
+
+
+</html>

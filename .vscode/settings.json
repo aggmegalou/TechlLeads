@@ -1,0 +1,22 @@
+
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "some-postgres",
+            "database": "postgres",
+            "username": "postgres"
+        }
+    ],
+    "maven.view": "flat",
+    "vmArgs": "-XX:+EnableDynamicAgentLoading"
+}
+
+
+

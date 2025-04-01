@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+   <meta charset="UTF-8">
+   <title>Candidate Ranking Results</title>
+</head>
+   <h1> Hire&Go</h1>
+<!--Χρήση STYLE αντί για CSS για συγκέντρωση κώδικα-->
+<style> 
+    h1 {
+        color: darkblue;
+        font-family: Lora;
+    }
+ </style>
+ <body>
+    <h2 class="center-text"><strong></strong>Candidate Ranking Results</h2> <strong> </h2>
+        <style>
+            .center-text {
+                text-align: center;
+                color: navy;
+            }
+        </style>
+        <p>Here you can find all applicants from most suitable to least suitable for the position created based on your
+            prefered skills and abilities.</p>
+            <style>
+             h1 {
+                 margin-bottom: 50px;
+             }
+         </style>
+         <style>
+             p {
+                 margin-bottom: 50px;
+                 text-align: center;
+             }
+         </style>
+         <style>
+             body {
+                 font-family: Arial, sans-serif;
+                 margin: 20px;
+             }
+             table {
+                 width: 90%;
+                 margin: auto;
+                 border-collapse: collapse;
+                border: 2px solid #333;
+                overflow: hideen;
+            }
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+                word-wrap: break-word;
+            }
+            th {
+                background-color: white;
+            }
+            caption {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+                color: teal;
+            }
+        </style>
+
+       <table id="rankingTable">
+           <caption>Ranking Results</caption>
+           <thead>
+               <tr>
+                   <th>File</th>
+                   <th>Resume Summary</th>
+               </tr>
+           </thead>
+           <tbody >
+               <tr th:each="file, iterStat : ${items}">
+                   <td th:text="${file.get('resume')}"></td>
+                   <td th:text="${file.get('resumeSummary')}"></td>
+               </tr>
+           </tbody>
+       </table>
+       <!--Δημιουργία Πίνακα που αλλάζει μέγεθος με βάση τα δεδομένα του κάθε κελιού-->
+       <script>
+           function adjustTableCorners() {
+            const table = document.getElementById('rankingTable');
+               table.style.borderRadius = "10px";
+               const cells = table.querySelectorAll('th,td');
+               cells.forEach(cell => {
+                   cell.style.minWidth = "100px";
+                   cell.style.height = "auto";
+               });
+           }
+           adjustTableCorners();
+       </script>
+</body>
+</html>
